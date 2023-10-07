@@ -1,0 +1,30 @@
+{
+    "manifest_version": 3,
+    "name": "Visualize The Text",
+    "description": "Detects double clicks on text to get the image.",
+    "version": "1.0",
+    "permissions": ["activeTab"],
+    "action": {
+      "default_popup": "popup.html",
+      "default_icon": {
+        "16": "eye.png",
+        "48": "eye.png",
+        "128": "eye.png"
+      }
+    },
+    "icons": {
+      "16": "eye.png",
+      "48": "eye.png",
+      "128": "eye.png"
+    },
+    "host_permissions": [
+      "https://*/*"
+    ],
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["content.js"]
+      }
+    ]
+  }
+  
